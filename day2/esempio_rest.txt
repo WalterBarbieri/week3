@@ -1,0 +1,14 @@
+function somma(...numeri) {
+  let risultato = 0;
+  numeri.forEach((element, i) => {
+    if (i === numeri.length - 1 || i === numeri.length - 2) {
+      risultato += element;
+    }
+    // document.getElementById("indexSomma1").innerHTML += i + ", ";
+  });
+  return risultato;
+}
+
+document.getElementById("somma1").innerHTML = somma(2, 3, 4, 5);
+
+document.getElementById("somma2").innerHTML = somma(10,20,30);
