@@ -406,3 +406,24 @@ const sumAllTheYears = (array) => {
 }*/
 
 console.log(sumAllTheYears(movies));
+
+/* ESERCIZIO 16 EXTRA
+  Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
+*/
+
+var selezione = document.getElementById('selezione');
+
+for (let i = 0; i < movies.length; i++) {
+  selezione.innerHTML += `<option value="${movies[i].imdbID}">${movies[i].Title}</option>`;
+};
+var btnScegli = document.getElementById('scegli');
+btnScegli.addEventListener('click', function() {
+  var selezionato = selezione.value;
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].imdbID === selezionato) {
+      document.getElementById('scheda').innerHTML = `<h1>${movies[i].Title}</h1><h3>Anno: ${movies[i].Year}</h3><img src=${movies[i].Poster} >`
+    }
+  }
+
+
+})
