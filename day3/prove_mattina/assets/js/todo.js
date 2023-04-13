@@ -3,11 +3,11 @@ var addBtn = document.getElementById('inserisci');
 var listaTask = [];
 
 window.addEventListener('load', function () {
-    if (!localStorage.getItem('utente')) {
+    if(!localStorage.getItem('utente')) {
         location.href = '../../errore.html';
     }
 
-    if (listaTask.lenght == 0) {
+    if(listaTask.lenght == 0) {
         document.getElementById('titoloLista').innerText = 'Non ci sono task';
     } 
 
