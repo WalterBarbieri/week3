@@ -1,0 +1,46 @@
+PROCEDURA DI LOGIN CON BLOCCO DELLA PAGINA RISERVATA (rotta).
+
+Primo passo: descrizione della PROCEDURA.
+Nella pagina di login l'utente dovrà inserire un valore in un campo di input; questo valore sarà memorizzato dal browser (localStorage) e utilizzato in un altra pagina (area riservata) per saltura l'utente.
+Se l'utente non inserisce un valore e clicca sul button OPPURE scrive nella barra degli indrizzi il nome della pagina area riservata (es. http://www.walter.com/reserved.html), l'applicazione deve intercettare l'assenza del valore richiesto e indirizza l'utente verso una pagina di errore.
+
+HTML 
+
+index (login)
+pagina 2 (todo - area riservata)
+errore (401)
+
+JS 
+
+index
+pagina 2
+
+
+PROGETTAZIONE NEL DETTAGLIO
+
+INDEX 
+1. campo di input dove scrivere il nome utente;
+2. button per passare alla pagina successiva (leggere il valore del campo e memorizzarlo);
+2a. Innanzitutto leggere il valore, scriverlo (localStorage), passare alla pagina successiva;
+
+PAGINA 2 
+1. Elemento HTMl per scrivere il nome utente;
+2. Controllo sull'esistenza del nome utente (localStorage) ed eventuale reindirizzamento a pagina errore se il nome utente non c'è;
+3. Elemento che consenta di uscire dall'area riservata (logout) ELIMINANDO i dati presenti;
+
+ERRORE
+1. Messaggio di errore;
+2. Link per tornare al Login;
+
+TODO LIST 
+creare un elenco di cose da fare (task) che possa essere aggiornato con l'aggiunta di nuovi elementi e l'eliminazione di elementi completati.
+
+HTML
+1. Campo di input per scrvere i nuovi task per inserirli nella lista;ù
+2. la lista di task;
+
+JS
+1. al click leggere la lista;
+2. memorizzare il valore;
+3. aggiungere il nuovo task alla lista già esistente con il corrispondente btn per eliminazione;
+4. consentire l'eliminazione di un task al click sul suo button di eliminazione; 
