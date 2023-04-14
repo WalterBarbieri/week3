@@ -426,4 +426,4 @@ btnScegli.addEventListener('click', function() {
   }
 
 
-})
+}) 
